@@ -2,9 +2,9 @@
 
 ## Notification Service API Design
 
-This service is responsible for displaying notifications to logged in users. User authentication is already handled by the main application, so no registration or login APIs are required.
+This service is responsible for displaying notifications to logged in users. User authentication is already handled by the main application, so no registration or login APIs are required as given in question
 
-The service uses the existing Vehicle API and Depot API to generate notifications.
+The service uses the existing Vehicle API and Depot API to generate notifications
 
 ### Existing APIs
 
@@ -106,7 +106,7 @@ json
     {
       "id": "N001",
       "title": "Vehicle Task Alert",
-      "message": "Task T101 has high impact and duration 120 minutes",
+      "message": "Task T101 has high",
       "isRead": false
     }
   ]
@@ -122,35 +122,35 @@ PATCH /api/notifications/{id}/read
 
 Request
 
-```json
+json
 {
   "isRead": true
 }
-```
+
 
 Response
 
-```json
+json
 {
   "message": "Notification marked as read"
 }
-```
+
 
 ---
 
 ## Notification Object
 
-```json
+json
 {
   "id": "N001",
   "title": "Vehicle Task Alert",
-  "message": "Task T101 has high impact and duration 120 minutes",
+  "message": "Task T101 has high impact",
   "source": "vehicle",
   "referenceId": "T101",
   "isRead": false,
   "createdAt": "2026-06-09T10:30:00Z"
 }
-```
+
 
 ---
 
@@ -160,24 +160,24 @@ WebSocket can be used for real time notifications.
 
 Connection:
 
-```http
+http
 ws://localhost:3000/notifications
-```
+
 
 When a new vehicle task or depot update is detected, the server pushes a notification event to connected users.
 
 Example Event
 
-```json
+json
 {
   "event": "new-notification",
   "data": {
     "id": "N001",
     "title": "Vehicle Task Alert",
-    "message": "Task T101 has high impact and duration 120 minutes"
+    "message": "Task T101 has high impact"
   }
 }
-```
+
 
 This allows the frontend to update the notification list instantly without refreshing the page.
 
