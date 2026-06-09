@@ -1,0 +1,23 @@
+{
+  "name": "2300321540169",
+  "version": "1.0.0",
+  "description": "\"# 2300321540169\"",
+  "main": "Stage6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shashwat-27/2300321540169.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shashwat-27/2300321540169/issues"
+  },
+  "homepage": "https://github.com/Shashwat-27/2300321540169#readme",
+  "dependencies": {
+    "axios": "^1.17.0"
+  }
+}
