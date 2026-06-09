@@ -1,4 +1,4 @@
-# notification.md
+# notification_system_design.md
 
 ## Notification Service API Design
 
